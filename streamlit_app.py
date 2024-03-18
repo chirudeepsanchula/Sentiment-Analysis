@@ -6,6 +6,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
 from wordcloud import WordCloud
+import os
 
 # Set NLTK data directory
 nltk.data.path.append(os.path.join(os.getcwd(), 'nltk_data'))
