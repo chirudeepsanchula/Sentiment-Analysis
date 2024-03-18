@@ -1,7 +1,4 @@
 import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
 from flask import Flask, render_template, request
 import pandas as pd
 import re
@@ -12,7 +9,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score
 
-app = Flask(__name__)
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 # Load the dataset
 df = pd.read_csv('data.csv')
