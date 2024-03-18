@@ -6,6 +6,10 @@ from nltk.stem import WordNetLemmatizer
 import re
 from wordcloud import WordCloud
 
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
 # Load the saved model and vectorizer
 model = joblib.load('models/sentiment_model.pkl')
 vectorizer = joblib.load('models/vectorizer.pkl')
